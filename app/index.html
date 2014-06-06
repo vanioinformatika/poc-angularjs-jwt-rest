@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Angular Authentication PoC</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+        <script src="./auth/auth.client.js"></script>
+
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+    </head>
+    <body ng-app="myApp">
+        <div class="container">
+            <div ng-controller="UserCtrl" class="col-sm-6 col-sm-offset-3">
+                <div ng-show="!isAuthenticated">
+                    <h1><span class="glyphicon glyphicon-log-in"></span> Login</h1>
+                    <h4>{{error}}&nbsp;</h4>
+                    <form role="form" ng-submit="submit()">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input class="form-control" ng-model="user.username" type="text" name="user" placeholder="Username" />
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input class="form-control" ng-model="user.password" type="password" name="pass" placeholder="Password" />
+                        </div>
+                        <input class="btn btn-warning" type="submit" value="Login" />
+                    </form>
+                </div>
+
+                <div ng-show="isAuthenticated">
+                    <h1><span class="glyphicon glyphicon-dashboard"></span> Angular Authentication PoC</h1>
+                    <h4>Welcome {{welcome}}</h4>
+                    <a class="btn btn-warning" ng-click="logout()" href="">Logout</a>
+                    <div style="padding-top: 1em">Session data will be updated on every request (counter + 10). Session timeout value is 1 min.
+                    </div>
+                    <br><a ng-click="callRestricted()" href="">Call REST service</a>
+                    <div><br>REST service response:</div>
+                    <div ng-bind-html="getMessage()" style="font-family: monospace; font-size: 80%"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

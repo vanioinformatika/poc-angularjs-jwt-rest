@@ -1,0 +1,15 @@
+{
+  "name": "poc-angularjs-jwt-rest",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "angular-sanitize": "~1.2.16",
+    "angular-bootstrap": "~0.11.0"
+  },
+  "devDependencies": {
+    "karma": "~0.2.2",
+    "jasmine": "~2.0.0",
+    "angular-mocks": "~1.2.16"
+  }
+}
