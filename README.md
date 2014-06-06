@@ -26,4 +26,7 @@ Set correct working dir in app.server.js: workingDir
     cd test/mock_server
     nodejs app.server.js
 
+## Tips
+
 If you have __Error: listen EADDRINUSE__ then change the port number in app.listen
+
