@@ -1,0 +1,16 @@
+\.orig$
+\.orig\..*$
+\.chg\..*$
+\.rej$
+\.conflict\~$
+
+node_modules
+bower_components
+/nbproject/private/
+dist
+.tmp
+.sass-cache
+.DS_Store
+.hg
+
+npm-debug.log
