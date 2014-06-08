@@ -3,7 +3,7 @@
 This application is a proof-of-concept (PoC) of using AngularJS with secured REST service with session handling and authorization.
 It is using JTW - JSON Web Token.
 
-Session data encrypted on the server side and immutable by the client application.
+Session data hashed on the server side and immutable by the client application (but readable).
 
 All request update the Authorization header, so token will be short-term (improve security).
 
