@@ -5,6 +5,8 @@ It is using JTW - JSON Web Token.
 
 Session data encrypted on the server side and immutable by the client application.
 
+All request update the Authorization header, so token will be short-term (improve security).
+
 Based on https://github.com/auth0/angular-token-auth
 
 JWT more information:
